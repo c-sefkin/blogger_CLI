@@ -1,0 +1,21 @@
+<h1>Posts</h1>
+
+<div class="col-sm-4">
+  <ul class="list-unstyled">
+    {{#each model as |post|}}
+      <li>
+        {{#link-to 'post' post}}
+
+            {{post.title}}
+            <span class="muted">
+              by {{post.author.name}}
+            </span>
+        {{/link-to}}
+      </li>
+    {{/each}}
+  </ul>
+</div>
+
+<div class="col-sm-8 outlet">
+    {{outlet}}
+  </div>
